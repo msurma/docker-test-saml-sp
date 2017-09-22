@@ -21,7 +21,7 @@ $config = array(
      * external url, no matter where you come from (direct access or via the
      * reverse proxy).
      */
-    'baseurlpath' => 'simplesaml/',
+    'baseurlpath' => getenv('SIMPLESAMLPHP_BASEURLPATH'),
     'certdir' => 'cert/',
     'loggingdir' => 'log/',
     'datadir' => 'data/',
@@ -846,6 +846,6 @@ $config = array(
      * Example:
      *   'trusted.url.domains' => array('sp.example.com', 'app.example.com'),
      */
-    'trusted.url.domains' => array(),
+    'trusted.url.domains' => explode(',', getenv('SIMPLESAMLPHP_TRUSTED_DOMAINS')),
 
 );

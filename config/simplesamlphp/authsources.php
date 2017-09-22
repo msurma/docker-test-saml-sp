@@ -20,4 +20,10 @@ $config = array(
         ),
     ),
 
+    'test-sp' => array(
+        'saml:SP',
+        'entityID' => getenv('SIMPLESAMLPHP_SP_ENTITY_ID'),
+        'idp' => getenv('SIMPLESAMLPHP_IDP_METADATA_URL'),
+    ),
+
 );
